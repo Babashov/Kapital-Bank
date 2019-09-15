@@ -1,0 +1,10 @@
+.wrapper#content {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 636px;
+}
+.wrapper#content #absolute_wrapper {
+    box-sizing: border-box;
+    padding: 0 140px;
+}

@@ -1,0 +1,41 @@
+<header>
+    <div class="wrapper mobile desctop tablet"> 
+        <a href="https://kapitalbank.az/" class="mobile_menu_opener"></a> 
+        <div class="leftSide"> <a href="https://kapitalbank.az/" class="kapitalbank">
+            <img src="https://kapitalbank.az/images/KapitalBank.svg" alt=""></a> 
+        </div> 
+    </div>
+
+    <div class="wrapper main"> 
+        <a href="#" class="mobile_menu_opener mobile"></a>
+        <div class="rightSide desctop"> 
+            <ul class="langense"> 
+                <li> 
+                    <a href="https://kapitalbank.az?hl=en" title="En" lang="en">EN</a> 
+                </li> 
+                <li> <a href="https://kapitalbank.az?hl=ru" title="Ru" lang="ru">RU</a> 
+                </li> 
+            </ul> 
+            <ul class="tools"> 
+                <li>
+                    <a href="tel:196">
+                        <img src="https://kapitalbank.az/images/196.png" alt="">
+                    </a>
+                </li> 
+                <li> 
+                    <a href="https://www.birbank.az/" target="_blank">INTERNET BANK</a> 
+                </li> 
+                <li  id="searchCaller" class="desctop"> 
+                    <a (click) = "showSearchForm($event)" href="">
+                        <img src="https://kapitalbank.az/images/lupa.png" alt="">
+                    </a> 
+                    <form [ngClass]="{'showSub': isSearchFormShow==true, 'notShowSub':isSearchFormShow==false}"  action="https://kapitalbank.az/search" class="search desctop" id="searchDesctop"> 
+                        <input #localInputRef type="text" name="localInputRef"> 
+                    </form> 
+                </li> 
+            </ul> 
+        </div> 
+    </div>
+
+
+</header>

@@ -1,0 +1,52 @@
+<nav> 
+    <ul id="mainMenu"> 
+        <li (mouseenter) ="mouseEnter($event,menu.id)"  (mouseleave) ="mouseLeave($event,menu.id)" *ngFor = "let menu of navMenu;" class=" with_sub" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+            <span class="toggle-icon"></span>
+            <a href="https://kapitalbank.az/loans?hl=az" title="Kreditlər" class="" itemprop="url name">
+                <span class="menuSpan">{{ menu.name }}</span>
+            </a> 
+            <div style="display: none;"  class="sub mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar">
+                <div id="mCSB_1" class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_inside" style="max-height: 855px;" tabindex="0">
+                            <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr"> 
+                                <ul style="padding-left: 17px; opacity: 1;"> 
+                                    <li *ngFor = "let submenu of navSubMenu" class=" submenu-item" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+                                        <a href="https://kapitalbank.az/loans/cash?hl=az" title="Gündəlik tələbat krediti" class="" itemprop="url">
+                                            <span *ngIf="submenu.parentId == menu.id"  val="Gündəlik tələbat krediti" itemprop="name">{{ submenu.name }}</span>
+                                        </a> 
+                                    </li>
+                                </ul> 
+                            </div>
+                            <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark mCSB_scrollTools_vertical" style="display: none;">
+                                <div class="mCSB_draggerContainer">
+                                    <div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px; height: 0px;">
+                                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                    </div>
+                                    <div class="mCSB_draggerRail"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+        </li> 
+    </ul> 
+    <ul class="bookmark"> 
+                                    <li class="" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+                                        <a href="/news" title="Xəbərlər" class="" itemprop="url name">Xəbərlər</a> 
+                                    </li> 
+                                    <li class="" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+                                        <a href="/tariffs" title="Tariflər" class="" itemprop="url name">Tariflər</a> 
+                                    </li> 
+                                    <li class="" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+                                        <a href="/about-bank" title="Bank haqqında" class="" itemprop="url name">Bank haqqında</a> 
+                                    </li> 
+                                    <li class="" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+                                        <a href="/feedback" title="Təklif və şikayətlər" class="" itemprop="url name">Təklif və şikayətlər</a> 
+                                    </li> 
+                                    <li class="" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+                                        <a href="/sitemap" title="Saytın xəritəsi" class="" itemprop="url name">Saytın xəritəsi</a> 
+                                    </li> 
+                                    <li class="" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+                                        <a href="https://pk.fimsa.az/az/calculator" title="Kompensasiya kalkulyatoru" class="" itemprop="url name">Kompensasiya kalkulyatoru</a> 
+                                    </li> 
+    </ul>
+</nav> 
+                            

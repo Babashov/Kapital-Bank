@@ -1,0 +1,80 @@
+<div id="currency"> 
+    <div class="currs"> 
+        <h3>Valyuta məzənnələri</h3> 
+        <table width="100%" cellpadding="5"> 
+            <tbody>
+                <tr> 
+                    <td colspan="2">{{ date }}</td> 
+                    <td>Mərkəzi Bank</td> 
+                    <td>Alış</td> <td>Satış</td> 
+                </tr> 
+                <tr> 
+                    <th>USD</th> 
+                    <td>
+                        <img src="https://kapitalbank.az/images/currs_stay.png" alt=""></td> 
+                        <td>{{usd}}</td> 
+                        <td>{{usdBuy}}</td> 
+                        <td>{{usdSell}}</td> 
+                    </tr> 
+                    <tr> 
+                        <th>EUR</th> 
+                        <td>
+                            <img src="https://kapitalbank.az/images/currs_stay.png" alt=""></td> 
+                            <td>{{eur}}</td> <td>{{eurBuy}}</td> <td>{{eurSell}}</td> 
+                        </tr> 
+                        <tr> 
+                            <th>RUB</th> 
+                            <td>
+                                <img src="https://kapitalbank.az/images/currs_stay.png" alt=""></td> 
+                                <td>{{rub}}</td> 
+                                <td>{{rubBuy}}</td> 
+                                <td>{{rubSell}}</td> 
+                            </tr> 
+                        </tbody>
+                    </table> 
+                    <span style="display:block;font-size:.9em;padding-bottom: 10px;">Bəzi filiallar üzrə fərqli məzənnələr təyin edilə bilər</span> 
+                    <a href="https://kapitalbank.az/currency-rates" class="archive">Ətraflı</a> 
+                </div> 
+                <div class="converter"> 
+                    <div class="calc"> 
+                        <h3>Kalkulyator</h3> 
+                        <table width="100%" cellpadding="5"> 
+                            <tbody>
+                                <tr> 
+                                    <td colspan="3"> 
+                                        <input type="text" id="CurrencyAmount" [(ngModel)]="defaultCurr"> </td> 
+                                    </tr> 
+                                    <tr> 
+                                        <td> 
+                                            <select [(ngModel)]="selectCurrencyBuy" id="CurrencyBuy"> 
+                                                <option value="AZN">AZN</option> 
+                                                <option value="USD">USD</option> 
+                                                <option value="EUR">EUR</option> 
+                                                <option value="RUB">RUB</option> 
+                                            </select> 
+                                        </td> 
+                                        <td align="center">
+                                            <img src="https://kapitalbank.az/images/converter.png" alt="">
+                                        </td> 
+                                        <td> 
+                                            <select [(ngModel)]="selectCurrencySell" id="CurrencySell"> 
+                                                <option value="USD">USD</option> 
+                                                <option value="EUR">EUR</option> 
+                                                <option value="RUB">RUB</option> 
+                                                <option value="AZN">AZN</option> 
+                                            </select> 
+                                        </td> 
+                                    </tr> 
+                                    <tr> 
+                                        <td colspan="3"> 
+                                            <button (click)="getCbarCurrency()">Hesabla</button> 
+                                        </td> 
+                                    </tr> 
+                                </tbody>
+                            </table> 
+                        </div> 
+                        <div id="converterNetice"> 
+                            <span>{{result}} <em>{{currenyType}}</em></span> 
+                        </div> 
+                    </div> 
+</div>

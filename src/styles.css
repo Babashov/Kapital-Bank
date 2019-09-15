@@ -1,1 +1,468 @@
-/* You can add global styles to this file, and also import other style files */
+ul li {
+    list-style-type: none;
+}
+
+body {
+    background: #f9fafa;
+    margin: 0;
+    padding: 0 0 320px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    font-size: .625em;
+    font-family: source_sans_proregular,sans-serif;
+    position: relative;
+}
+
+body img {
+    border: 0;
+}
+body a{
+    color:#9d002b;
+}
+
+body a:hover{
+
+    color:#9d002b;
+
+}
+
+header {
+    display: block;
+    text-align: center;
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: #b10738;
+    border-top: 1px solid #fff;
+}
+header .wrapper {
+    box-sizing: border-box;
+    padding: 0 140px;
+}
+
+.leftSide {
+    width: 290px;
+    height: 50px;
+    background: #fff;
+    float: left;
+    text-align: left;
+}
+
+.leftSide a {
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 26px;
+}
+
+.rightSide {
+    margin-left: 290px;
+}
+
+.rightSide .langense {
+    float: left;
+    list-style-type: none;
+}
+header .wrapper .rightSide .langense li {
+    display: inline-block;
+    padding: 16px 0 0 30px;
+}
+
+header .wrapper .rightSide a {
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+}
+
+header .wrapper .rightSide .tools {
+    float: right;
+    list-style-type: none;
+}
+
+.rightSide .tools li {
+    display: block;
+    float: left;
+    height: 29px;
+    border-right: 2px solid #96062f;
+    padding: 16px 25px 0;
+    position: relative;
+}
+
+header .wrapper .rightSide .tools li a {
+    vertical-align: baseline;
+}
+
+header .wrapper .rightSide .tools li .search {
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+header .wrapper .rightSide .tools li .search input {
+    padding: 10px;
+    margin-top:20px;
+    width: 300px;
+}
+
+
+.wrapper#content {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 636px;
+}
+.wrapper#content #absolute_wrapper {
+    box-sizing: border-box;
+    padding: 0 140px;
+}
+
+.contentLeftSide {
+    width: 290px;
+    background: #fff;
+    text-align: left;
+    float: left;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+}
+
+.contentLeftSide #menuBgSquare {
+    height: 40px;
+    margin-left: -20px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: #b10738 url(https://kapitalbank.az/images/menuBgSquare.png?v=2) right top no-repeat;
+    position: absolute;
+    z-index: 1;
+    top: 300px;
+    left: 30px;
+    right: 0;
+    opacity: 0;
+}
+.contentLeftSide nav {
+    display: block;
+    position: relative;
+    z-index: 200;
+    height: 100%;
+    border-right: 1px solid #eff0f0;
+}
+
+.contentLeftSide nav #mainMenu {
+    padding: 115px 0 30px 40px;
+    display: block;
+    list-style-type: none;
+}
+
+.contentLeftSide nav #mainMenu>li {
+    display: block;
+    padding-bottom: 15px;
+}
+
+.contentLeftSide nav #mainMenu>li:hover span.toggle-icon {
+    display: block;
+    position: absolute;
+    width:90%;
+    margin-left:-30px;
+    margin-top:-5px;
+    height:40px;
+    background: #9d002b;
+    z-index:-1;
+    border:1px solid transparent;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.contentLeftSide nav #mainMenu>li:hover span.menuSpan {
+    color:white;
+}
+
+.contentLeftSide nav #mainMenu>li>a {
+    border-bottom: 1px solid #9d002b;
+    display: block;
+    border: 0;
+    font-size: 16px;
+    color: #263238;
+    padding-bottom: 5px;
+}
+
+.contentLeftSide nav #mainMenu>li>a span {
+    border-bottom: 2px solid #b10738;
+    font-family: source_sans_proregular;
+    font-weight: 700;
+}
+
+.showSub
+{
+    display:block !important;
+}
+.notShowSub
+{
+    display:none !important;
+}
+.contentLeftSide nav #mainMenu>li>a span:before {
+    content: " ";
+    display: block;
+    float: left;
+    width: 40px;
+    height: 30px;
+    margin-right: 15px;
+    background: url(https://kapitalbank.az/images/menu.png?v=6) right top no-repeat;
+}
+
+.mCustomScrollBox {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 100%;
+    outline: 0;
+    direction: ltr;
+}
+
+.contentLeftSide nav #mainMenu>li .sub>div>div>ul {
+    list-style-type: none;
+    display: block;
+    padding-left: 0;
+    padding-top: 25px;
+}
+
+.contentLeftSide nav #mainMenu>li .sub>div>div>ul>li {
+    padding: 0 0 1px;
+    background-position: 170px 37px;
+    background-repeat: no-repeat;
+}
+
+.contentLeftSide nav #mainMenu>li .sub>div>div>ul>li a {
+    font-size: 16px;
+    background: 0;
+    border-bottom: 0;
+    color: #263238;
+}
+
+.contentLeftSide nav #mainMenu>li .sub>div>div>ul>li a span {
+    font-family: source_sans_proregular;
+    font-weight: 700;
+    border-bottom: 2px solid #e2e2e2;
+}
+
+.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action {
+    touch-action: auto;
+}
+
+
+
+.contentLeftSide nav #mainMenu>li .sub {
+    position: absolute;
+    width: 100%;
+    width: 250px;
+    left: 100%;
+    background: #e2e2e2;
+    top: 45px;
+    bottom: 0;
+    display: none;
+}
+
+
+.contentLeftSide nav #mainMenu>li:nth-child(2)>a span:before {
+    background-position: right -38px;
+}
+
+.contentLeftSide nav #mainMenu>li:nth-child(3)>a span:before {
+    background-position: right -78px;
+}
+
+.contentLeftSide nav #mainMenu>li:nth-child(4)>a span:before {
+    background-position: right -117px;
+}
+
+.contentLeftSide nav #mainMenu>li:nth-child(5)>a span:before {
+    background-position: right -150px;
+}
+
+.contentLeftSide nav #mainMenu>li:nth-child(6)>a span:before {
+    background-position: right -191px;
+}
+
+
+
+
+
+.contentLeftSide .bookmark {
+    padding: 0 30px 20px 40px;
+    list-style-type: none;
+    font-size: 15px;
+}
+
+
+.contentLeftSide .bookmark li {
+    padding-bottom: 5px;
+}
+
+.contentLeftSide .bookmark li a {
+    line-height: 1em;
+    display: inline-block;
+}
+
+
+.rightSide #bookmarks {
+    height: 50%;
+    position: relative;
+}
+
+.rightSide #bookmarks ul {
+    display: block;
+    list-style-type: none;
+    position: absolute;
+    left: -42px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.rightSide #bookmarks ul li {
+    display: block;
+    width: 25%;
+    float: left;
+    height: 50%;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+.rightSide #bookmarks ul li.link a {
+    display: block;
+    height: 100%;
+    background: #b10738 url(https://kapitalbank.az/images/flag.png) center center no-repeat;
+    background-size: 20% 30%;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+}
+
+.rightSide #bookmarks ul li.link a span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 50px;
+    text-align: center;
+}
+
+.rightSide #bookmarks ul li.link a:hover {
+    background-color: #9c0631;
+}
+
+.rightSide #currency {
+    background: #f0f0f0;
+}
+.wrapper#content #absolute_wrapper .rightSide #currency .currs, .wrapper#content #absolute_wrapper .rightSide #currency .converter {
+    border: 1px solid #fff;
+    color: #253138;
+    font-size: 16px;
+    padding: 20px;
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+}
+.rightSide #currency .converter h3 {
+    padding-bottom: 10px;
+}
+.rightSide #currency .converter table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+.wrapper#content #absolute_wrapper .rightSide #currency .currs table tr:first-child, .wrapper#content #absolute_wrapper .rightSide #currency .converter table tr:first-child {
+    font-size: 14px;
+}
+.wrapper#content #absolute_wrapper .rightSide #currency .converter {
+    padding: 0;
+}
+.wrapper#content #absolute_wrapper .rightSide #currency .converter .calc {
+    box-sizing: border-box;
+    padding: 20px;
+    float: left;
+    width: 50%;
+}
+.wrapper#content #absolute_wrapper .rightSide #currency .currs h3, .wrapper#content #absolute_wrapper .rightSide #currency .converter h3 {
+    padding-bottom: 10px;
+}
+.rightSide #currency .converter table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+.converter table tr:first-child {
+    font-size: 14px;
+}
+.rightSide #currency .converter #converterNetice {
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding-top: 77px;
+}
+.wrapper#content #absolute_wrapper .rightSide #currency .converter #converterNetice span {
+    font-size: 30px;
+    font-weight: 700;
+}
+.rightSide #currency .converter #converterNetice span em {
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.rightSide #currency .converter .calc select {
+    padding: 4px 0 4px 5px!important;
+    background: #b10738;
+    color: #fff;
+    font-family: source_sans_probold,arial;
+    font-size: 15px;
+    width: 100%;
+}
+
+.wrapper#content #absolute_wrapper .rightSide #currency .converter .calc input {
+    width: 100%;
+    font-size: 25px;
+    padding: 0 5px;
+    font-family: source_sans_probold,arial;
+    text-align: right;
+    border: 2px solid #b10738;
+}
+.rightSide #currency .converter .calc button {
+    padding: 5px;
+}
+
+button, .button, .facebook_button {
+    font-size: 16px;
+    font-family: source_sans_proregular;
+    display: block;
+    background: #b10738;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border: 1px solid #e1b4c1;
+    padding: 12px;
+    width: 100%;
+    max-width: 480px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.rightSide #currency .converter table tr th {
+    font-family: source_sans_probold,arial;
+    font-weight: 400;
+    color: #b10738;
+}
+
+.wrapper#content #absolute_wrapper .rightSide #currency .archive {
+    border-bottom: 1px dashed #f0f0f0!important;
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: source_sans_probold,arial;
+}
+
