@@ -8,7 +8,11 @@
             itemscope="itemscope" 
             itemtype="http://schema.org/SiteNavigationElement"
             > 
-            <span class="toggle-icon"></span>
+            <span 
+                class="toggle-icon"
+                [@MainMenuHover] = MainMenuState
+                >
+            </span>
             <a href="https://kapitalbank.az/loans?hl=az" title="Kreditlər" class="" itemprop="url name">
                 <span class="menuSpan">{{ menu.name }}</span>
             </a> 
@@ -21,7 +25,7 @@
                                         class=" submenu-item" 
                                         itemscope="itemscope" 
                                         itemtype="http://schema.org/SiteNavigationElement"
-                                        [@changeDivSize] = defaultState
+                                        [@SubMenuHover] = defaultState
                                         > 
                                         <a href="https://kapitalbank.az/loans/cash?hl=az" title="Gündəlik tələbat krediti" class="" itemprop="url">
                                             <span *ngIf="submenu.parentId == menu.id"  val="Gündəlik tələbat krediti" itemprop="name">{{ submenu.name }}</span>

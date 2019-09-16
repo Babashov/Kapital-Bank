@@ -1,7 +1,7 @@
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
-export const DefualtAnimations = {
-    changeDivSize: trigger('changeDivSize',[
+export const DefualtAnimations = [
+    trigger('SubMenuHover',[
         state('initial',style({
             marginLeft: '-20px'
         })),
@@ -16,7 +16,7 @@ export const DefualtAnimations = {
                     offset: 0.1
                 }),
                 style({
-                    marginLeft: '8px',
+                    marginLeft: '5px',
                     offset: 0.3
                 }),
                 style({
@@ -25,5 +25,26 @@ export const DefualtAnimations = {
                 })
             ]))
         ])
+    ]),
+
+    trigger('MainMenuHover',[
+        state('initial',style({
+            // position: 'absolute',
+            // width: '90%',
+            // marginLeft: '-30px',
+            // marginTop: '-5px',
+            // height: '40px',
+            backgroundColor: 'white'
+        })),
+        state('final',style({
+            // position: 'absolute',
+            // width: '90%',
+            // marginLeft: '-30px',
+            // marginTop: '-5px',
+            // height: '40px',
+            backgroundColor: '#9d002b'
+        })),
+        transition('initial=>final',animate('1s')),
+        transition('final=>initial',animate('1s'))
     ])
-}
+]

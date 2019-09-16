@@ -169,7 +169,7 @@ header .wrapper .rightSide .tools li .search input {
     margin-left:-30px;
     margin-top:-5px;
     height:40px;
-    background: #9d002b;
+    /* background: #9d002b; */
     z-index:-1;
     border:1px solid transparent;
     border-top-right-radius: 20px;
