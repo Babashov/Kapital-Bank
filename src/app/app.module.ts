@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from  '@angular/common/http';
@@ -29,8 +30,8 @@ import { CurrencyComponent } from './components/wrapper-main/right-side/currency
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    BrowserAnimationsModule    
   ],
   providers: [Globals],
   bootstrap: [AppComponent]

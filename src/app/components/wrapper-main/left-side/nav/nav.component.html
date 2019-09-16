@@ -1,6 +1,13 @@
 <nav> 
     <ul id="mainMenu"> 
-        <li (mouseenter) ="mouseEnter($event,menu.id)"  (mouseleave) ="mouseLeave($event,menu.id)" *ngFor = "let menu of navMenu;" class=" with_sub" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+        <li 
+            (mouseenter) ="mouseEnter($event,menu.id)"  
+            (mouseleave) ="mouseLeave($event,menu.id)" 
+            *ngFor = "let menu of navMenu;" 
+            class=" with_sub" 
+            itemscope="itemscope" 
+            itemtype="http://schema.org/SiteNavigationElement"
+            > 
             <span class="toggle-icon"></span>
             <a href="https://kapitalbank.az/loans?hl=az" title="Kreditlər" class="" itemprop="url name">
                 <span class="menuSpan">{{ menu.name }}</span>
@@ -9,7 +16,13 @@
                 <div id="mCSB_1" class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_inside" style="max-height: 855px;" tabindex="0">
                             <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr"> 
                                 <ul style="padding-left: 17px; opacity: 1;"> 
-                                    <li *ngFor = "let submenu of navSubMenu" class=" submenu-item" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+                                    <li 
+                                        *ngFor = "let submenu of navSubMenu" 
+                                        class=" submenu-item" 
+                                        itemscope="itemscope" 
+                                        itemtype="http://schema.org/SiteNavigationElement"
+                                        [@changeDivSize] = defaultState
+                                        > 
                                         <a href="https://kapitalbank.az/loans/cash?hl=az" title="Gündəlik tələbat krediti" class="" itemprop="url">
                                             <span *ngIf="submenu.parentId == menu.id"  val="Gündəlik tələbat krediti" itemprop="name">{{ submenu.name }}</span>
                                         </a> 

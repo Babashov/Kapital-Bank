@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DefualtAnimations } from '../../../../animations/default-animation'
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  styleUrls: ['./nav.component.css'],
+  animations:[
+    DefualtAnimations.changeDivSize
+  ]
 })
 export class NavComponent implements OnInit {
+
+  defaultState: string = 'initial'
 
   navMenu: object[] = [
     {
@@ -119,6 +124,7 @@ export class NavComponent implements OnInit {
   }
 
   mouseEnter(event: any, menuId: any) {
+    this.defaultState = this.defaultState == 'initial' ? 'final' : 'initial';
     this.navSubMenu.forEach((subMenu: any) => {
       if (subMenu.parentId === menuId) {
         event.target.querySelector('.sub').classList.add('showSub');
@@ -127,6 +133,7 @@ export class NavComponent implements OnInit {
   }
 
   mouseLeave(event: any, menuId: string) {
+    this.defaultState = this.defaultState == 'initial' ? 'final' : 'initial';
     this.navSubMenu.forEach((subMenu: any) => {
       if (subMenu.parentId === menuId) {
         event.target.querySelector('.sub').classList.remove('showSub');
